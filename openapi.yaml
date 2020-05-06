@@ -111,7 +111,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/arrFacturas'
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Factura'
         '404':
           $ref: '#/components/responses/Respuesta_404'
           
@@ -182,7 +184,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/arrFacturas'
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Factura'
         '404':
           $ref: '#/components/responses/Respuesta_404'
           
@@ -201,7 +205,9 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/arrFacturas'
+                type: array
+                items: 
+                  $ref: '#/components/schemas/Factura'
         '404':
           $ref: '#/components/responses/Respuesta_404'
 
@@ -421,11 +427,6 @@ components:
                 href:
                   type: string
                   format: url
-                  
-    arrFacturas:
-      type: array
-      items:
-        $ref: '#/components/schemas/Factura'
       
     Message:
       type: object
